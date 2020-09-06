@@ -233,6 +233,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArticulosController.cs" />
+    <Compile Include="Controllers\CategoriasController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\EstadosController.cs" />
     <Compile Include="Controllers\GenerosController.cs" />
@@ -241,6 +243,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Articulos.cs" />
+    <Compile Include="Models\Categorias.cs" />
     <Compile Include="Models\Contexto.cs" />
     <Compile Include="Models\Empleados.cs" />
     <Compile Include="Models\Estados.cs" />
@@ -271,6 +275,16 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Articulos\Create.cshtml" />
+    <Content Include="Views\Articulos\Delete.cshtml" />
+    <Content Include="Views\Articulos\Details.cshtml" />
+    <Content Include="Views\Articulos\Edit.cshtml" />
+    <Content Include="Views\Articulos\Index.cshtml" />
+    <Content Include="Views\Categorias\Create.cshtml" />
+    <Content Include="Views\Categorias\Delete.cshtml" />
+    <Content Include="Views\Categorias\Details.cshtml" />
+    <Content Include="Views\Categorias\Edit.cshtml" />
+    <Content Include="Views\Categorias\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
