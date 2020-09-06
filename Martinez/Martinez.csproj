@@ -243,6 +243,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009051353180_InitialCreate.cs" />
+    <Compile Include="Migrations\202009051353180_InitialCreate.designer.cs">
+      <DependentUpon>202009051353180_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009062328104_inventario.cs" />
+    <Compile Include="Migrations\202009062328104_inventario.designer.cs">
+      <DependentUpon>202009062328104_inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Articulos.cs" />
     <Compile Include="Models\Categorias.cs" />
     <Compile Include="Models\Contexto.cs" />
@@ -300,6 +309,14 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202009051353180_InitialCreate.resx">
+      <DependentUpon>202009051353180_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009062328104_inventario.resx">
+      <DependentUpon>202009062328104_inventario.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
