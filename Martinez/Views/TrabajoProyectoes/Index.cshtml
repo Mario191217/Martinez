@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Martinez.Models.TrabajoProyecto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Proyectos.Proyecto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Trabajos.Trabajo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Proyectos.Proyecto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Trabajos.Trabajo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdTrabajoProyecto }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdTrabajoProyecto }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdTrabajoProyecto })
+        </td>
+    </tr>
+}
+
+</table>

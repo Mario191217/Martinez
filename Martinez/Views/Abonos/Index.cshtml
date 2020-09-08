@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Martinez.Models.Abonos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Trabajos.Trabajo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Abono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaAbono)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Trabajos.Trabajo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Abono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaAbono)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdAbono }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdAbono }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdAbono })
+        </td>
+    </tr>
+}
+
+</table>

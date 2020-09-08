@@ -16,6 +16,11 @@ namespace Martinez.Models
         public string Descripcion { get; set; }
         public DateTime UltimaCompra { get; set; }
 
+        public int IdCategoria { get; set; }
+        public virtual Categorias Categorias { get; set; }
+
+        public virtual List<DetalleProyecto> DetalleProyectos { get; set; }
+
 
     }
 }

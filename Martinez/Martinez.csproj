@@ -234,12 +234,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AbonosController.cs" />
     <Compile Include="Controllers\ArticulosController.cs" />
     <Compile Include="Controllers\CategoriasController.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\DetalleProyectoesController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\EstadosController.cs" />
     <Compile Include="Controllers\GenerosController.cs" />
+    <Compile Include="Controllers\ProyectosController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\TrabajoProyectoesController.cs" />
+    <Compile Include="Controllers\TrabajosController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -253,13 +259,19 @@
       <DependentUpon>202009062328104_inventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Abonos.cs" />
     <Compile Include="Models\Articulos.cs" />
     <Compile Include="Models\Categorias.cs" />
+    <Compile Include="Models\Clientes.cs" />
     <Compile Include="Models\Contexto.cs" />
+    <Compile Include="Models\DetalleProyecto.cs" />
     <Compile Include="Models\Empleados.cs" />
     <Compile Include="Models\Estados.cs" />
     <Compile Include="Models\Generos.cs" />
+    <Compile Include="Models\Proyectos.cs" />
     <Compile Include="Models\Roles.cs" />
+    <Compile Include="Models\TrabajoProyecto.cs" />
+    <Compile Include="Models\Trabajos.cs" />
     <Compile Include="Models\Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -295,6 +307,36 @@
     <Content Include="Views\Categorias\Details.cshtml" />
     <Content Include="Views\Categorias\Edit.cshtml" />
     <Content Include="Views\Categorias\Index.cshtml" />
+    <Content Include="Views\Abonos\Create.cshtml" />
+    <Content Include="Views\Abonos\Delete.cshtml" />
+    <Content Include="Views\Abonos\Details.cshtml" />
+    <Content Include="Views\Abonos\Edit.cshtml" />
+    <Content Include="Views\Abonos\Index.cshtml" />
+    <Content Include="Views\Clientes\Create.cshtml" />
+    <Content Include="Views\Clientes\Delete.cshtml" />
+    <Content Include="Views\Clientes\Details.cshtml" />
+    <Content Include="Views\Clientes\Edit.cshtml" />
+    <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\DetalleProyectoes\Create.cshtml" />
+    <Content Include="Views\DetalleProyectoes\Delete.cshtml" />
+    <Content Include="Views\DetalleProyectoes\Details.cshtml" />
+    <Content Include="Views\DetalleProyectoes\Edit.cshtml" />
+    <Content Include="Views\DetalleProyectoes\Index.cshtml" />
+    <Content Include="Views\Proyectos\Create.cshtml" />
+    <Content Include="Views\Proyectos\Delete.cshtml" />
+    <Content Include="Views\Proyectos\Details.cshtml" />
+    <Content Include="Views\Proyectos\Edit.cshtml" />
+    <Content Include="Views\Proyectos\Index.cshtml" />
+    <Content Include="Views\TrabajoProyectoes\Create.cshtml" />
+    <Content Include="Views\TrabajoProyectoes\Delete.cshtml" />
+    <Content Include="Views\TrabajoProyectoes\Details.cshtml" />
+    <Content Include="Views\TrabajoProyectoes\Edit.cshtml" />
+    <Content Include="Views\TrabajoProyectoes\Index.cshtml" />
+    <Content Include="Views\Trabajos\Create.cshtml" />
+    <Content Include="Views\Trabajos\Delete.cshtml" />
+    <Content Include="Views\Trabajos\Details.cshtml" />
+    <Content Include="Views\Trabajos\Edit.cshtml" />
+    <Content Include="Views\Trabajos\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

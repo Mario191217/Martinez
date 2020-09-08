@@ -12,5 +12,7 @@ namespace Martinez.Models
         public int IdCategoria { get; set; }
         public string Categoria { get; set; }
         public string Descripcion { get; set; }
+
+        public virtual List<Articulos> Articulos { get; set; }
     }
 }
