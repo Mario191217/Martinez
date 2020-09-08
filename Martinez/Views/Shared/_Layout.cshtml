@@ -1,18 +1,52 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>System</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/Mod/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="~/Content/Site.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="~/Content/DataTables/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="~/Content/DataTables/css/responsive.dataTables.min.css">
+
+
+    <!-- Font Awesome JS -->
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <!--Jquery-->
+
+
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Dui").mask("00000000-0")
+            $("#Nit").mask("0000-000000-000-0")
+            $("#NIT").mask("0000-000000-000-0")
+            $("#Telefono").mask("0000-0000")
+            $("#TelefonoEmergencia").mask("0000-0000")
+            $("#Fecha").mask("00/00/0000")
+            $("#Tarjeta").mask("0000-0000000-0000")
+        })
+    </script>
+    <style>
+        body {
+            overflow-x: hidden;
+            background: #139BAE;
+        }
+    </style>
 </head>
+
 <body>
     <div class="wrapper">
         <!-- Sidebar  -->
@@ -20,7 +54,7 @@
             <div class="sidebar-header">
                 <div class="LogoSM">
                     <div class="img">
-                        <a href=""><img src="~/Content/LogoSM.png"></a>
+                        <a href="@Url.Action("Index","Home")"><img src="~/Content/LogoSM.png"></a>
                     </div>
                 </div>
             </div>
@@ -32,53 +66,57 @@
                     </a>
                     <ul>
                         <li>
-                            <a href=""><i class="fas fa-clipboard-check"></i> Productos</a>
+                            <a href="@Url.Action("Index","Productos")"><i class="fas fa-clipboard-check"></i> Productos</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-copy"></i> Categorias</a>
+                            <a href="@Url.Action("Index","Categorias")"><i class="fas fa-copy"></i> Categorias</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-ruler-combined"></i> Unidades de Medida</a>
+                            <a href="@Url.Action("Index","UnidadMedidas")"><i class="fas fa-ruler-combined"></i> Unidades de Medida</a>
                         </li>
                     </ul>
                 </li>
-                <li class="activado">
-                    <a>
-                        <i class="icon d fas fa-cart-arrow-down"></i>   Compras<i class="icon i fas fa-chevron-down"></i>
-                    </a>
-                    <ul>
-                        <li>
-                            <a href=""><i class="fas fa-ambulance"></i> Proveedores</a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fas fa-cart-arrow-down"></i> Compras</a>
-                        </li>
-                        <li>
-                            <a href="#">Facturas</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="activado">
-                    <a href="">
-                        <i class="icon d fas fa-file-alt"></i>   Ventas<i class="icon i fas fa-chevron-down"></i>
-                    </a>
-                    <ul>
-                        <li>
-                            <a href="#">Ventas</a>
-                        </li>
-                        <li>
-                            <a href="">Clientes</a>
-                        </li>
-                        <li>
-                            <a href="#">Ventas</a>
-                        </li>
-                    </ul>
 
+                    <li class="activado">
+                        <a>
+                            <i class="icon d fas fa-cart-arrow-down"></i>   Compras<i class="icon i fas fa-chevron-down"></i>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="@Url.Action("Index","Proveedores")"><i class="fas fa-ambulance"></i> Proveedores</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","Compras")"><i class="fas fa-cart-arrow-down"></i> Compras</a>
+                            </li>
+                            <li>
+                                <a href="#">Facturas</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="activado">
+                        <a href="@Url.Action("Index","Compras")">
+                            <i class="icon d fas fa-file-alt"></i>   Ventas<i class="icon i fas fa-chevron-down"></i>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">Ventas</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index","Clientes")">Clientes</a>
+                            </li>
+                            <li>
+                                <a href="#">Ventas</a>
+                            </li>
+                        </ul>
+                    </li>
+                
                 <li class="activado">
                     <a href="#">
                         <i class="icon d fab fa-buffer"></i>   Proyectos<i class="icon i fas fa-chevron-down"></i>
                     </a>
                     <ul>
+
                         <li>
                             <a href="@Url.Action("Index","Proyectos")"> <i class="fas fa-book"></i>  Proyectos</a>
                         </li>
@@ -90,6 +128,23 @@
                         </li>
                     </ul>
                 </li>
+
+                @*<li class="activado">
+                        <a href="#">
+                            <i class="icon d fas fa-address-book"></i>  Empleados<i class="icon i fas fa-chevron-down"></i></a>
+
+                        <ul >
+                            <li>
+                                <a href="#"><i class="icon d fas fa-users"></i>Empleados</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="icon d fas fa-user-shield"></i>Usuarios</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="icon d fas fa-address-card"></i>Roles</a>
+                            </li>
+                        </ul>
+                    </li>*@
 
             </ul>
         </nav>
@@ -106,47 +161,46 @@
                     <button class="btn btn-info d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button>
-                    {
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                        <ul class="menu nav navbar-nav ml-auto">
-                            <li class=" nav-item">
-                                <button type="button" class="btn btn-warning btn-sm"><i class="icon fas fa-bell"></i></button>
+                  
+               
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                            <li class=" nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="icon fas fa-users"></i>Usuario
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="">Gestion Empleados</a>
-                                    <a class="dropdown-item" href="">Gestion Usuarios</a>
-                                    <a class="dropdown-item" href="">Gestion Roles</a>
-                                    <a class="dropdown-item" href="">Salir</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                            <ul class="menu nav navbar-nav ml-auto">
+                                <li class=" nav-item">
+                                    <button type="button" class="btn btn-warning btn-sm"><i class="icon fas fa-bell"></i></button>
 
-                    @*<div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <li class=" nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="icon fas fa-users"></i>Usuario
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="@Url.Action("Index","Empleados")">Gestion Empleados</a>
+                                        <a class="dropdown-item" href="@Url.Action("Index","Usuarios")">Gestion Usuarios</a>
+                                        <a class="dropdown-item" href="@Url.Action("Index","Roles")">Gestion Roles</a>
+                                        <a class="dropdown-item" href="@Url.Action("CerrarSesion","Home")">Salir</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                 
+                    
+                        @*<div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                        <ul class="menu nav navbar-nav ml-auto">
-                            <li class=" nav-item" style="margin:2px">
-                                <a class="btn btn-warning btn-sm"><i class="icon fas fa-bell"></i></a>
-                            <li class=" nav-item" style="margin:2px">
-                                <a href="" class="btn btn-danger btn-sm"><i class="icon fas fa-amazon"></i> Salir</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>*@
+                            <ul class="menu nav navbar-nav ml-auto">
+                                <li class=" nav-item" style="margin:2px">
+                                    <a class="btn btn-warning btn-sm"><i class="icon fas fa-bell"></i></a>
+                                <li class=" nav-item" style="margin:2px">
+                                    <a href="@Url.Action("CerrarSesion","Home")" class="btn btn-danger btn-sm"><i class="icon fas fa-amazon"></i> Salir</a>
+                                </li>
+                            </ul>
+                        </div>*@
+                    
+                </div>
             </nav>
 
-
-            <div class="container body-content">
+            <div id="content" @*class="p-4 p-md-5 pt-5" style="padding: 0.3rem!important; background-color:#ff6a00;*@>
                 @RenderBody()
-                <hr />
-                <footer>
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-                </footer>
             </div>
 
             <script src="~/Scripts/popper.min.js"></script>
@@ -226,8 +280,9 @@
                     });
                 });
             </script>
-            </div>
         </div>
+    </div>
 
 </body>
+
 </html>
