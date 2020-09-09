@@ -258,6 +258,10 @@
     <Compile Include="Migrations\202009062328104_inventario.designer.cs">
       <DependentUpon>202009062328104_inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009091557593_Trabajos.cs" />
+    <Compile Include="Migrations\202009091557593_Trabajos.designer.cs">
+      <DependentUpon>202009091557593_Trabajos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Abonos.cs" />
     <Compile Include="Models\Articulos.cs" />
@@ -359,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009062328104_inventario.resx">
       <DependentUpon>202009062328104_inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009091557593_Trabajos.resx">
+      <DependentUpon>202009091557593_Trabajos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
