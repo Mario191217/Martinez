@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,6 +12,7 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="~/Content/bootstrap.min.css">
     <link rel="stylesheet" href="~/Content/Mod/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="~/Content/Site.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -24,9 +26,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+   
     <!--Jquery-->
-
-
     <script type="text/javascript" src="js/jquery.mask.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -39,12 +40,12 @@
             $("#Tarjeta").mask("0000-0000000-0000")
         })
     </script>
-    <style>
+    @*<style>
         body {
             overflow-x: hidden;
             background: #139BAE;
         }
-    </style>
+    </style>*@
 </head>
 
 <body>
@@ -61,98 +62,94 @@
 
             <ul class="menu">
                 <li>
-                    <a>
-                        <i class="icon d fab fa-product-hunt"></i>   Productos<i class="icon i fas fa-chevron-down"></i>
-                    </a>
-                    <ul>
-                        <li>
-                            <a href="@Url.Action("Index","Productos")"><i class="fas fa-clipboard-check"></i> Productos</a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("Index","Categorias")"><i class="fas fa-copy"></i> Categorias</a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("Index","UnidadMedidas")"><i class="fas fa-ruler-combined"></i> Unidades de Medida</a>
-                        </li>
+                   <a>
+                   <i class="icon d fab fa-product-hunt"></i>   Productos<i class="icon i fas fa-chevron-down"></i>
+                   </a>
+            <ul>
+                 <li>
+                    <a href="@Url.Action("Index","Productos")"><i class="fas fa-clipboard-check"></i> Productos</a>
+                 </li>
+                 <li>
+                    <a href="@Url.Action("Index","Categorias")"><i class="fas fa-copy"></i> Categorias</a>
+                 </li>
+                 <li>
+                    <a href="@Url.Action("Index","UnidadMedidas")"><i class="fas fa-ruler-combined"></i> Unidades de Medida</a>
+                 </li>
                     </ul>
                 </li>
-
-                    <li class="activado">
-                        <a>
-                            <i class="icon d fas fa-cart-arrow-down"></i>   Compras<i class="icon i fas fa-chevron-down"></i>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="@Url.Action("Index","Proveedores")"><i class="fas fa-ambulance"></i> Proveedores</a>
-                            </li>
-                            <li>
-                                <a href="@Url.Action("Index","Compras")"><i class="fas fa-cart-arrow-down"></i> Compras</a>
-                            </li>
-                            <li>
-                                <a href="#">Facturas</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="activado">
-                        <a href="@Url.Action("Index","Compras")">
-                            <i class="icon d fas fa-file-alt"></i>   Ventas<i class="icon i fas fa-chevron-down"></i>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="#">Ventas</a>
-                            </li>
-                            <li>
-                                <a href="@Url.Action("Index","Clientes")">Clientes</a>
-                            </li>
-                            <li>
-                                <a href="#">Ventas</a>
-                            </li>
-                        </ul>
-                    </li>
-                
                 <li class="activado">
-                    <a href="#">
-                        <i class="icon d fab fa-buffer"></i>   Proyectos<i class="icon i fas fa-chevron-down"></i>
+                    <a>
+                         <i class="icon d fas fa-cart-arrow-down"></i>   Compras<i class="icon i fas fa-chevron-down"></i>
                     </a>
-                    <ul>
+            <ul>
+                 <li>
+                      <a href="@Url.Action("Index","Proveedores")"><i class="fas fa-ambulance"></i> Proveedores</a>
+                 </li>
+                 <li>
+                     <a href="@Url.Action("Index","Compras")"><i class="fas fa-cart-arrow-down"></i> Compras</a>
+                 </li>
+                 <li>
+                     <a href="#">Facturas</a>
+                 </li>
+            </ul>
+                 </li>
 
-                        <li>
-                            <a href="@Url.Action("Index","Proyectos")"> <i class="fas fa-book"></i>  Proyectos</a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("Index","DetalleProyectos")"><i class="fas fa-file-alt"></i>  Detalles de Proyectos</a>
-                        </li>
-                        <li>
-                            <a href="@Url.Action("Index","Extras")"><i class="far fa-clone"></i>  Extra</a>
-                        </li>
-                    </ul>
-                </li>
+                <li class="activado">
+                    <a href="@Url.Action("Index","Compras")">
+                    <i class="icon d fas fa-file-alt"></i>   Ventas<i class="icon i fas fa-chevron-down"></i>
+                    </a>
+            <ul>
+                 <li>
+                    <a href="#">Ventas</a>
+                 </li>
+                 <li>
+                    <a href="@Url.Action("Index","Clientes")">Clientes</a>
+                 </li>
+                 <li>
+                    <a href="#">Ventas</a>
+                 </li>
+            </ul>
+                 </li>
+                 <li class="activado">
+                    <a href="#">
+                     <i class="icon d fab fa-buffer"></i>   Proyectos<i class="icon i fas fa-chevron-down"></i>
+                    </a>
+             <ul>
 
-                @*<li class="activado">
-                        <a href="#">
-                            <i class="icon d fas fa-address-book"></i>  Empleados<i class="icon i fas fa-chevron-down"></i></a>
+                  <li>
+                    <a href="@Url.Action("Index","Proyectos")"> <i class="fas fa-book"></i>  Proyectos</a>
+                  </li>
+                  <li>
+                    <a href="@Url.Action("Index","DetalleProyectos")"><i class="fas fa-file-alt"></i>  Detalles de Proyectos</a>
+                  </li>
+                  <li>
+                    <a href="@Url.Action("Index","Extras")"><i class="far fa-clone"></i>  Extra</a>
+                  </li>
+             </ul>
+                  </li>
 
-                        <ul >
-                            <li>
-                                <a href="#"><i class="icon d fas fa-users"></i>Empleados</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="icon d fas fa-user-shield"></i>Usuarios</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="icon d fas fa-address-card"></i>Roles</a>
-                            </li>
-                        </ul>
-                    </li>*@
-
+                  <li class="activado">
+                     <a href="#">
+                     <i class="icon d fas fa-address-book"></i>  Empleados<i class="icon i fas fa-chevron-down"></i></a>
+             <ul >
+                  <li>
+                     <a href="#"><i class="icon d fas fa-users"></i>Empleados</a>
+                  </li>
+                  <li>
+                     <a href="#"><i class="icon d fas fa-user-shield"></i>Usuarios</a>
+                  </li>
+                  <li>
+                     <a href="#"><i class="icon d fas fa-address-card"></i>Roles</a>
+                  </li>
+             </ul>
+               </li>
             </ul>
         </nav>
 
-        <!-- Page Content  -->
+        <!-- Bar Horizont  -->
         <div id="content">
 
-            <nav class="navbar navbar-expand">
+        <nav class="navbar navbar-expand">
                 <div class="container-fluid">
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
@@ -161,45 +158,43 @@
                     <button class="btn btn-info d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="menu nav navbar-nav ml-auto">
+            <li class=" nav-item">
+                    <button type="button" class="btn btn-warning btn-sm"><i class="icon fas fa-bell"></i></button>
 
-                  
-               
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                            <ul class="menu nav navbar-nav ml-auto">
-                                <li class=" nav-item">
-                                    <button type="button" class="btn btn-warning btn-sm"><i class="icon fas fa-bell"></i></button>
-
-                                <li class=" nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="icon fas fa-users"></i>Usuario
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="@Url.Action("Index","Empleados")">Gestion Empleados</a>
-                                        <a class="dropdown-item" href="@Url.Action("Index","Usuarios")">Gestion Usuarios</a>
-                                        <a class="dropdown-item" href="@Url.Action("Index","Roles")">Gestion Roles</a>
-                                        <a class="dropdown-item" href="@Url.Action("CerrarSesion","Home")">Salir</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                 
-                    
-                        @*<div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                            <ul class="menu nav navbar-nav ml-auto">
-                                <li class=" nav-item" style="margin:2px">
-                                    <a class="btn btn-warning btn-sm"><i class="icon fas fa-bell"></i></a>
-                                <li class=" nav-item" style="margin:2px">
-                                    <a href="@Url.Action("CerrarSesion","Home")" class="btn btn-danger btn-sm"><i class="icon fas fa-amazon"></i> Salir</a>
-                                </li>
-                            </ul>
-                        </div>*@
-                    
+                       <li class=" nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <i class="icon fas fa-users"></i>Usuario
+                       </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                       <a class="dropdown-item" href="@Url.Action("Index","Empleados")">Gestion Empleados</a>
+                       <a class="dropdown-item" href="@Url.Action("Index","Usuarios")">Gestion Usuarios</a>
+                       <a class="dropdown-item" href="@Url.Action("Index","Roles")">Gestion Roles</a>
+                       <a class="dropdown-item" href="@Url.Action("CerrarSesion","Home")">Salir</a>
                 </div>
+            </li>
+        </ul>
+       </div> 
+    </div>           
+
+    
+  @*<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="menu nav navbar-nav ml-auto">
+            <li class=" nav-item" style="margin:2px">
+                      <a class="btn btn-warning btn-sm"><i class="icon fas fa-bell"></i></a>
+            <li class=" nav-item" style="margin:2px">
+                     <a href="@Url.Action("CerrarSesion","Home")" class="btn btn-danger btn-sm"><i class="icon fas fa-amazon"></i> Salir</a>
+            </li>
+        </ul>
+        </div>
+      </div>*@
+
+
             </nav>
 
-            <div id="content" @*class="p-4 p-md-5 pt-5" style="padding: 0.3rem!important; background-color:#ff6a00;*@>
+            <div id="content">
                 @RenderBody()
             </div>
 
@@ -217,36 +212,28 @@
             @RenderSection("proyecto", false)
             <script type="text/javascript">
                 $(function () {
-
                     $("#Fecha").datepicker();
                     $("#FechaInicio").datepicker();
                     $("#FechaFin").datepicker();
                 });
             </script>
+
+            
             <script type="text/javascript">
                 $(document).ready(function () {
                     $('#sidebarCollapse').on('click', function () {
                         $('#sidebar').classList.toggle('active');
                     });
-
                     $('.menu li:has(ul)').on('click', function () {
-
-
                         if ($(this).hasClass('activado')) {
                             $(this).removeClass('activado');
                             $(this).children('ul').slideUp();
-
                         } else {
                             $('.menu li ul').slideUp();
                             $('.menu li').removeClass('activado');
                             $(this).addClass('activado');
                             $(this).children('ul').slideDown();
-
                         }
-
-
-
-
                     });
                 });
             </script>
@@ -257,26 +244,6 @@
                             url: '../../Scripts/Spanish.json'
                         },
                         responsive: true
-                    });
-                });
-            </script>
-            <script type="text/javascript">
-                $(document).ready(function () {
-
-                    $("#Fecha").datepicker();
-
-
-                    $("#Dui").on('keydown', function (event) {
-                        //alert("ed");
-                        if (event.keyCode == 8 || event.keyCode == 37 || event.keyCode == 39) {
-
-                        } else {
-                            inputval = $(this).val();
-                            var string = inputval.replace(/[^0-9])/g, "");
-                            var bloque1 = string.substring(0, 8);
-                            var string = (bloque1 + "-");
-                            $(this).val(string);
-                        }
                     });
                 });
             </script>
