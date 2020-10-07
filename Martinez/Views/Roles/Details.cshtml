@@ -4,31 +4,45 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<style>
+    .row {
+        width: 100%;
+    }
 
-<div>
-    <h4>Roles</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Rol)
-        </dt>
+    .col-sm-3 {
+        display: inline-flex;
+    }
 
-        <dd>
-            @Html.DisplayFor(model => model.Rol)
-        </dd>
+        .col-sm-3 .jumbotron {
+            font-size: 85%;
+            width: 100%;
+        }
+</style>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </dt>
+<h4>Roles</h4>
+<hr />
+<div class="row">
+    <div class="col-sm-3">
+        <dl class="dl-horizontal jumbotron" style="background:#2C3E50; color: #fff">
+            <dt>
+                @Html.DisplayNameFor(model => model.Rol)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Descripcion)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Rol)
+            </dd>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IdRol }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+            <dt>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Descripcion)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @*@Html.ActionLink("Editar", "Edit", new { id = Model.IdRol }) |*@
+        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-info" })
+    </p>

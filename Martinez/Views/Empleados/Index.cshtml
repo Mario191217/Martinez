@@ -4,19 +4,19 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
+<center><h2>Empleados</h2></center>
+<br />
+<p style="width:20%;">
+    @Html.ActionLink("Agregar", "Create", null, new { @class = "btn btn-primary btn-lg btn-block", })
 </p>
-<table class="table">
-    <tr>
-        <th>
+<table class="table jumbotron" style="background-color: #2C3E50; color: #fff;">
+    <tr class="bg-dark">
+        @*<th>
             @Html.DisplayNameFor(model => model.Estado.Estado)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Genero.Genero)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Nombre)
         </th>
@@ -29,12 +29,12 @@
         <th>
             @Html.DisplayNameFor(model => model.Direccion)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.DUI)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.NIT)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Email)
         </th>
@@ -44,7 +44,7 @@
         <th>
             @Html.DisplayNameFor(model => model.TelefonoEmergencia)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Observaciones)
         </th>
         <th>
@@ -55,63 +55,64 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FechaFin)
-        </th>
+        </th>*@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Estado.Estado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Genero.Genero)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Apellido)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cargo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Direccion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DUI)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NIT)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ContactoEmergencia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TelefonoEmergencia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Observaciones)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaNacimiento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaInicio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaFin)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdEmpleado }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdEmpleado }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdEmpleado })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Estado.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genero.Genero)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.DUI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NIT)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactoEmergencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefonoEmergencia)
+            </td>
+            <!--<td>
+                @Html.DisplayFor(modelItem => item.Observaciones)-->
+            @*</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaFin)
+            </td>*@
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.IdEmpleado }, new { @class = "btn btn-warning" }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.IdEmpleado }, new { @class = "btn btn-info" }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.IdEmpleado }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
 
 </table>

@@ -4,13 +4,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
+<center><h2>Trabajos de proyecto</h2></center>
+<br />
+<p style="width:20%;">
+    @Html.ActionLink("Agregar", "Create", null, new { @class = "btn btn-primary btn-lg btn-block", })
 </p>
-<table class="table">
-    <tr>
+<table class="table jumbotron" style="background-color: #2C3E50; color: #fff;">
+    <tr class="bg-dark">
         <th>
             @Html.DisplayNameFor(model => model.Proyectos.Proyecto)
         </th>
@@ -20,20 +20,21 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Proyectos.Proyecto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Trabajos.Trabajo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdTrabajoProyecto }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdTrabajoProyecto }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdTrabajoProyecto })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Proyectos.Proyecto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Trabajos.Trabajo)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.IdTrabajoProyecto }, new { @class = "btn btn-warning" }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.IdTrabajoProyecto }, new { @class = "btn btn-info" }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.IdTrabajoProyecto }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
 
 </table>

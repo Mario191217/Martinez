@@ -3,16 +3,32 @@
 @{
     ViewBag.Title = "Create";
 }
+<style>
+    input {
+        max-width: 95%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-<h2>Create</h2>
+    .text-left {
+        justify-content: center;
+    }
+
+    .control-label {
+        padding-left: 30px
+    }
+</style>
 
 
-@using (Html.BeginForm()) 
+
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>DetalleProyecto</h4>
+
+<center>
+    <div class="jumbotron col-sm-5" style="background-color: #2C3E50; color: #fff">
+        <center><h4 style="color:#fff">Roles</h4></center>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -53,12 +69,14 @@
             </div>
         </div>
     </div>
-}
+</center>
+    }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
-<script src="~/Scripts/jquery-3.4.1.min.js"></script>
-<script src="~/Scripts/jquery.validate.min.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
