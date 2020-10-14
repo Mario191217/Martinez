@@ -19,11 +19,12 @@
         }
 </style>
 
-<h4>Empleados</h4>
-<hr />
+
 <div class="row">
     <div class="col-sm-3">
-        <dl class="dl-horizontal jumbotron" style="background:#2C3E50; color: #fff">
+        <dl class="dl-horizontal jumbotron" style="background-color: #EFF5FB; color: #000000">
+            <h4>Informacion de Empleado</h4>
+            <hr />
             <dt>
                 @Html.DisplayNameFor(model => model.Estado.Estado)
             </dt>
@@ -75,7 +76,7 @@
     </div>
 
     <div class="col-sm-3">
-        <dl class="jumbotron" style="background:#2C3E50; color: #fff">
+        <dl class="jumbotron" style="background-color: #EFF5FB; color: #000000">
             <dt>
                 @Html.DisplayNameFor(model => model.DUI)
             </dt>
@@ -150,9 +151,11 @@
 
         </dl>
     </div>
+
     <hr />
 
     <p>
         @Html.ActionLink("Editar", "Edit", new { id = Model.IdEmpleado }, new { @class = "btn btn-success" }) |
         @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-info" })
     </p>
+</div>

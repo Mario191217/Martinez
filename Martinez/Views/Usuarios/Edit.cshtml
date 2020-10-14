@@ -3,16 +3,31 @@
 @{
     ViewBag.Title = "Edit";
 }
+<style>
+    input {
+        max-width: 95%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-<h2>Edit</h2>
+    .text-left {
+        justify-content: center;
+    }
+
+    .control-label {
+        padding-left: 30px
+    }
+</style>
+
 
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Usuarios</h4>
+<center>
+    <div class="jumbotron col-sm-5" style="background-color: #EFF5FB; color: #000000">
+        <center><h4 style="color:#000000">Editar Informacion de Usuarios</h4></center>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.IdUsuario)
@@ -51,16 +66,16 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Guardar"  class="btn btn-success" style="width: 30%" />
+                @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-info" })
             </div>
         </div>
     </div>
-}
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+</center>
+        }
 
-<script src="~/Scripts/jquery-3.4.1.min.js"></script>
-<script src="~/Scripts/jquery.validate.min.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+        <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

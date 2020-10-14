@@ -9,8 +9,8 @@
 <p style="width:20%;">
     @Html.ActionLink("Agregar", "Create", null, new { @class = "btn btn-primary btn-lg btn-block", })
 </p>
-<table class="table jumbotron" style="background-color: #2C3E50; color: #fff;">
-    <tr class="bg-dark">
+<table class="table jumbotron" style="background-color:#EFF5FB; color: #000000">
+    <tr class="bg-dark"  style="color: #fff">
         <th>
             @Html.DisplayNameFor(model => model.Clientes.Cliente)
         </th>
@@ -20,7 +20,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Trabajo)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Comision)
         </th>
         <th>
@@ -31,11 +31,11 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Rentabilidad)
-        </th>
-        <th>
+        </th>*@
+        @*<th>
             @Html.DisplayNameFor(model => model.Ubicacion)
-        </th>
-        <th>
+        </th>*@
+        @*<th>
             @Html.DisplayNameFor(model => model.Abono)
         </th>
         <th>
@@ -46,7 +46,7 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FechaFinalizacion)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Terminado)
         </th>
@@ -65,7 +65,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Trabajo)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.Comision)
             </td>
             <td>
@@ -91,7 +91,7 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.FechaFinalizacion)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Terminado)
             </td>
