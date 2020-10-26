@@ -4,39 +4,54 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<style>
+    .row {
+        width: 100%;
+    }
 
-<div>
-    <h4>Abonos</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Trabajos.Trabajo)
-        </dt>
+    .col-sm-3 {
+        display: inline-flex;
+    }
 
-        <dd>
-            @Html.DisplayFor(model => model.Trabajos.Trabajo)
-        </dd>
+        .col-sm-3 .jumbotron {
+            font-size: 85%;
+            width: 100%;
+        }
+</style>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Abono)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Abono)
-        </dd>
+<div class="row">
+    <div class="col-sm-3">
+        <dl class="dl-horizontal jumbotron" style="background-color: #EFF5FB; color: #000000">
+            <h4>Informacion de Bonos</h4>
+            <hr />
+            <dt>
+                @Html.DisplayNameFor(model => model.Trabajos.Trabajo)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FechaAbono)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Trabajos.Trabajo)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.FechaAbono)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Abono)
+            </dt>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IdAbono }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+            <dd>
+                @Html.DisplayFor(model => model.Abono)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FechaAbono)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FechaAbono)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.IdAbono }, new { @class = "btn btn-success" }) |
+        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-info" })
+    </p>
