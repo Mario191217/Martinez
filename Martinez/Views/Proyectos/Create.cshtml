@@ -24,8 +24,8 @@
 {
     @Html.AntiForgeryToken()
 <center>
-    <div class="jumbotron col-sm-5" style="background-color: #2C3E50; color: #fff">
-        <center><h4 style="color:#fff">Proyectos</h4></center>
+    <div class="jumbotron col-sm-5" style="background-color:#EFF5FB; color: #000000">
+        <center><h4 style="color:#000000">Proyectos</h4></center>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -72,7 +72,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                @Html.ActionLink("Atras", "Index", null, new { @class = "btn btn-info" })
+                @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-info" })
                 <input type="submit" value="Guardar" class="btn btn-success" />
             </div>
         </div>

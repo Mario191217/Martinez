@@ -9,8 +9,8 @@
 <p style="width:20%;">
     @Html.ActionLink("Agregar", "Create", null, new { @class = "btn btn-primary btn-lg btn-block", })
 </p>
-<table class="table jumbotron" style="background-color: #2C3E50; color: #fff;">
-    <tr class="bg-dark">
+<table class="table jumbotron" style="background-color:#EFF5FB; color: #000000">
+    <tr class="bg-dark" style="color: #fff">
         <th>
             @Html.DisplayNameFor(model => model.Cliente)
         </th>
@@ -48,9 +48,9 @@
                 @Html.DisplayFor(modelItem => item.NIT)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.IdCliente }, new { @class = "btn btn-warning" }) |
-                @Html.ActionLink("Details", "Details", new { id = item.IdCliente }, new { @class = "btn btn-info" }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.IdCliente }, new { @class = "btn btn-danger" })
+                @Html.ActionLink("Editar", "Edit", new { id = item.IdCliente }, new { @class = "btn btn-warning" }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.IdCliente }, new { @class = "btn btn-info" }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.IdCliente }, new { @class = "btn btn-danger" })
             </td>
         </tr>
     }
