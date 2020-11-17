@@ -667,6 +667,7 @@
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\EstadosController.cs" />
     <Compile Include="Controllers\GenerosController.cs" />
+    <Compile Include="Controllers\PrincipalController.cs" />
     <Compile Include="Controllers\ProyectosController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\TrabajoProyectoesController.cs" />
@@ -766,6 +767,7 @@
     <Content Include="Views\Trabajos\Details.cshtml" />
     <Content Include="Views\Trabajos\Edit.cshtml" />
     <Content Include="Views\Trabajos\Index.cshtml" />
+    <Content Include="Views\Principal\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
