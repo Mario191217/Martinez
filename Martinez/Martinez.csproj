@@ -569,6 +569,7 @@
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\src\index.js" />
+    <Content Include="Scripts\src\jquery.mask.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
     <Content Include="Scripts\src\methods\destroy.js" />
     <Content Include="Scripts\src\methods\disableEventListeners.js" />
